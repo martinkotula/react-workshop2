@@ -1,0 +1,8 @@
+[
+  {
+    "id": "Main.first-message",
+    "description": "Welcome message used on main screen",
+    "defaultMessage": "Welcome from {name}!",
+    "filepath": "src/views/Main.js"
+  }
+]
