@@ -9,9 +9,20 @@ class Main extends Component{
         super();
 
         this.state = {
-            amount: 10
+            amount: 0
         }
     }
+
+    componentDidMount(){
+        this.interval = setInterval(() => {
+            this.setState((prevState) => ({amount: prevState.amount + 0.5}))
+        }, 2000)
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval);
+    }
+
     render(){
         return (
             <div className="main">
@@ -50,6 +61,24 @@ class Main extends Component{
 
                 <br />
 
+                <br />
+                {this.state.amount}{' '}
+                <FormattedPlural 
+                    value={this.state.amount}
+                    one={<FormattedMessage id="one.pierog" defaultMessage="pieróg" />}
+                    few={<FormattedMessage id="few.pierog" defaultMessage="pierogi" />}
+                    many={<FormattedMessage id="many.pierog" defaultMessage="pierogów" />}
+                    other={<FormattedMessage id="other.pierog" defaultMessage="pieroga" />}
+                />
+
+                <br />
+                <FormattedMessage 
+                    id="fn.pierogi"
+                    description="pluralization for pierogi"
+                    defaultMessage={"{amount, plural, =0 {brak pierogów translation} one {# pieróg} few {# pierogi} many {# pierogów} other {# pieroga translation}}"}
+                    values={{amount:this.state.amount}}
+                />
+<br />
                 <Link path="/details">Go to details</Link>
             </div>
         );

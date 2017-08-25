@@ -1,8 +1,39 @@
 [
   {
+    "id": "showFromProps.text",
+    "defaultMessage": "Some text",
+    "filepath": "src/views/Details.js"
+  },
+  {
     "id": "Main.first-message",
     "description": "Welcome message used on main screen",
     "defaultMessage": "Welcome from {name}!",
+    "filepath": "src/views/Main.js"
+  },
+  {
+    "id": "one.pierog",
+    "defaultMessage": "pieróg",
+    "filepath": "src/views/Main.js"
+  },
+  {
+    "id": "few.pierog",
+    "defaultMessage": "pierogi",
+    "filepath": "src/views/Main.js"
+  },
+  {
+    "id": "many.pierog",
+    "defaultMessage": "pierogów",
+    "filepath": "src/views/Main.js"
+  },
+  {
+    "id": "other.pierog",
+    "defaultMessage": "pieroga",
+    "filepath": "src/views/Main.js"
+  },
+  {
+    "id": "fn.pierogi",
+    "description": "pluralization for pierogi",
+    "defaultMessage": "{amount, plural, =0 {brak pierogów translation} one {# pieróg} few {# pierogi} many {# pierogów} other {# pieroga translation}}",
     "filepath": "src/views/Main.js"
   }
 ]
